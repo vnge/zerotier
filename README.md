@@ -54,10 +54,56 @@ Zerotier 在多设备之间建立了一个 `Peer to Peer VPN（P2PVPN）` 连接
 
 ps:如果是centos，安装docker请使用`yum install docker-ce`
   
+
+```
+首先在服务器防火墙打开9993,9994,3443端口Tcp和udp。
+
+首先，安装Docker CE
+更新系统源
+
+sudo yum update
+
+安装yum-utils工具
+
+sudo yum -y install yum-utils
+
+将软件包添加至本地缓存
+
+sudo yum makecache fast
+
+安装 Docker CE
+
+sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+
+更新系统源
+
+sudo yum update
+
+sudo yum -y install docker-ce
+
+启动自动服务
+
+sudo systemctl enable docker
+
+启动服务
+
+sudo systemctl start docker
+
+
+```
 ## 3.2：下载项目源码
-```
+安装Git
+
+yum install git
+
+安装Planet
+拉取安装脚本
+
 git clone https://github.com/vnge/zerotier.git
+
+
 ```
+
 ## 3.3：执行安装脚本
 进入项目目录
 ```
