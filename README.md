@@ -57,6 +57,12 @@ yum install git
 ```
 git clone https://github.com/vnge/zerotier.git
 ```
+
+进入项目目录
+```
+cd docker-zerotier-planet
+```
+
 运行 deploy.sh 脚本
 
 ```
