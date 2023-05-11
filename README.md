@@ -55,12 +55,12 @@ yum install git
 拉取安装脚本
 
 ```
-git clone https://github.com/vnge/zerotier.git
+git clone https://kgithub.com/vnge/zerotier.git
 ```
 
 进入项目目录
 ```
-cd docker-zerotier-planet
+cd /root/zerotier
 ```
 
 运行 deploy.sh 脚本
