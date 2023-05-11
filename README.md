@@ -48,6 +48,7 @@ git clone https://github.com/vnge/zerotier.git
 端口输入9994，其他按照提示来。
 等到出现下面的提示就表示成功安装了。
 
+'''
 firewall-cmd --zone=public --add-port=3443/tcp --permanent
 firewall-cmd --zone=public --add-port=3443/udp --permanent
 firewall-cmd --zone=public --add-port=9993/tcp --permanent
@@ -56,7 +57,7 @@ firewall-cmd --zone=public --add-port=9994/tcp --permanent
 firewall-cmd --zone=public --add-port=9994/udp --permanent
 firewall-cmd --reload
 firewall-cmd --list-all
-
+'''
 
 
 访问 http://ip:3443 进入controller页面
@@ -94,8 +95,11 @@ openwrt的Zerotier实现
 
 在后面添加如下：
 
+'''
 iptables -I FORWARD -i zt6ovq7i62 -j ACCEPT
 iptables -I FORWARD -o zt6ovq7i62 -j ACCEPT
 iptables - t nat -I POSTROUTING -o zt6ovq7i62 -j MASQUERADE
+'''
+
 
 注意这里的zt6ovq7i62要换上你的。
