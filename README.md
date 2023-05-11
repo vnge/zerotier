@@ -3,48 +3,65 @@
 首先，安装Docker CE
 更新系统源
 
+```
 sudo yum update
+```
 
 安装yum-utils工具
 
+```
 sudo yum -y install yum-utils
+```
 
 将软件包添加至本地缓存
 
+```
 sudo yum makecache fast
+```
 
 安装 Docker CE
 
+```
 sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+```
 
 更新系统源
 
+```
 sudo yum update
+```
 
+```
 sudo yum -y install docker-ce
-
+```
 启动自动服务
 
+```
 sudo systemctl enable docker
+```
 
 启动服务
 
+```
 sudo systemctl start docker
-
+```
 安装Git
 
+```
 yum install git
-
+```
 
 安装Planet
 拉取安装脚本
 
+```
 git clone https://github.com/vnge/zerotier.git
-
+```
 运行 deploy.sh 脚本
 
+```
 ./deploy.sh
-
+```
 端口输入9994，其他按照提示来。
 等到出现下面的提示就表示成功安装了。
 
